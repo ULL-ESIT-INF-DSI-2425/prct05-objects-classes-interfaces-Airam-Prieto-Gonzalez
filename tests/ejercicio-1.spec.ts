@@ -1,4 +1,4 @@
-import { describe, test, expect } from 'vitest';
+import { describe, expect, test } from 'vitest';
 import { Pokemon } from '../src/ejercicio-1/Pokemon';
 import { Pokedex } from '../src/ejercicio-1/Pokedex';
 import { Combat } from '../src/ejercicio-1/Combat';
