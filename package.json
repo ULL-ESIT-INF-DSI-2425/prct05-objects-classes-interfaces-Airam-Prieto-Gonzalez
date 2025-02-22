@@ -1,0 +1,27 @@
+{
+  "name": "theory-examples",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start-1": "tsc-watch --onSuccess \"node dist/ejercicio-1/ejercicio-1.js\"",
+    "start-2": "tsc-watch --onSuccess \"node dist/ejercicio-2/ejercicio-2.js\"",
+    "doc": "typedoc",
+    "test": "vitest run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-tsdoc": "^0.4.0",
+    "globals": "^15.15.0",
+    "prettier": "^3.5.1",
+    "tsc-watch": "^6.2.1",
+    "typedoc": "^0.27.7",
+    "typescript-eslint": "^8.24.1",
+    "vitest": "^3.0.6"
+  }
+}
