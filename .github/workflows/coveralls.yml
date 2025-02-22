@@ -27,6 +27,3 @@ jobs:
       uses: coverallsapp/github-action@v2.3.6
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
- 
- 
-    Enter fullscreen mode
