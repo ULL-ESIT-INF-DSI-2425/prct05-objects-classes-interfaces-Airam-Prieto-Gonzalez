@@ -1,4 +1,4 @@
-Name: Continue Integration
+name: Continue Integration
 
 on:
   push:
