@@ -190,3 +190,111 @@ export class Bebida extends Consumible {
                 return result
         }
 }
+
+/**
+ * Clase que implementa una nevera inteligente
+ */
+export class Nevera {
+        private _alimentos: [alimento: Alimento, cantidad: number][]
+        private _bebidas: [bebida: Bebida, cantidad: number][]
+        private _lista: string[] = []
+
+        /**
+         * Constructor de la clase
+         * @param Alimentos array de alimentos
+         * @param Bebidas 
+         */
+        constructor(Alimentos: [alimento: Alimento, cantidad: number][], Bebidas: [bebida: Bebida, cantidad: number][]) {
+                this._alimentos = Alimentos
+                this._bebidas = Bebidas
+        }
+
+        /**
+         * Getter de alimentos
+         */
+        get alimentos() {
+                return this._alimentos
+        }
+
+        /**
+         * Getter de bebidas
+         */
+        get bebidas() {
+                return this._bebidas
+        }
+
+        /**
+         * Getter de lista
+         */
+        get lista() {
+                return this._lista
+        }
+
+        /**
+         * Método que añade un alimento
+         * @param alimento alimento a añadir
+         * @param cantidad cantidad de este
+         */
+        AddAlimento(alimento: Alimento, cantidad: number) {
+                this._alimentos.push([alimento, cantidad])
+        }
+
+        /**
+         * Método que añade una bebida
+         * @param bebida bebida a añadir
+         * @param cantidad cantidad de esta
+         */
+        AddBebida(bebida: Bebida, cantidad: number) {
+                this._bebidas.push([bebida, cantidad])
+        }
+
+        /**
+         * Método que consume un alimento
+         * @param alimento alimento a consumir
+         */
+        ConsumAlimento(alimento: string) {
+                this._alimentos.forEach(item => {
+                        if (item[0].name === alimento && item[1] > 0) {
+                                --item[1]
+                                if (item[1] === 0) {
+                                        this._lista.push(item[0].name)
+                                }
+                        }
+                })
+        }
+
+        /**
+         * Método que consume una bebida
+         * @param bebida bebida a consumir
+         */
+        ConsumBebida(bebida: string) {
+                this._bebidas.forEach(item => {
+                        if (item[0].name === bebida && item[1] > 0) {
+                                --item[1]
+                                if (item[1] === 0) {
+                                        this._lista.push(item[0].name)
+                                }
+                        }
+                })
+        }
+
+        /**
+         * Método que devuelve el inventario de la nevera
+         * @returns string que contiene la lista de alimentos y bebidas disponibles
+         */
+        Inventario(): string {
+                let result: string = "Alimentos: "
+                this._alimentos.forEach(item => {
+                        if (item[1] > 0) {
+                                result += item[0].name + " "
+                        }
+                })
+                result += "\nBebidas: "
+                this._bebidas.forEach(item => {
+                        if (item[1] > 0) {
+                                result += item[0].name + " "
+                        }
+                })
+                return result
+        }
+}
