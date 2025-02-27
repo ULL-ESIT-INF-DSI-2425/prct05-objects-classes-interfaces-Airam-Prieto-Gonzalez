@@ -5,6 +5,7 @@
   "scripts": {
     "start-1": "tsc-watch --onSuccess \"node dist/ejercicio-1/ejercicio-1.js\"",
     "start-2": "tsc-watch --onSuccess \"node dist/ejercicio-2/ejercicio-2.js\"",
+    "start-modi": "tsc-watch --onSuccess \"node dist/modi/alimento.js\"",
     "doc": "typedoc",
     "test": "vitest run",
     "coverage": "vitest run --coverage --coverage.include src --coverage.exclude docs"

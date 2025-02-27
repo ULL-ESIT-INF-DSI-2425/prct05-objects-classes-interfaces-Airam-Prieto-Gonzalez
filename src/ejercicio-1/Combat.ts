@@ -28,9 +28,7 @@ export class Combat {
    * @memberof Combat
    * @returns {Pokemon}
    */
-  get rival_a(): Pokemon {
-    return this.#rival_a
-  }
+  get rival_a(): Pokemon { return this.#rival_a }
 
   /**
    * @description Getter of the second rival.
@@ -39,9 +37,7 @@ export class Combat {
    * @memberof Combat
    * @returns {Pokemon}
    */
-  get rival_b(): Pokemon {
-    return this.#rival_b
-  }
+  get rival_b(): Pokemon { return this.#rival_b }
 
   /**
    * @method Start
